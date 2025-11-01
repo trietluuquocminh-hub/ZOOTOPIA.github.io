@@ -57,6 +57,43 @@
     ul {
       padding-left: 20px;
     }
+
+    /* Nút hồ cá */
+    .fish-button-container {
+      text-align: center;
+      margin: 40px 0 60px;
+    }
+
+    .fish-button {
+      background: linear-gradient(to right, #00b4db, #0083b0);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .fish-button::before {
+      content: "🐟";
+      position: absolute;
+      left: -30px;
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .fish-button:hover {
+      background: linear-gradient(to right, #0083b0, #00b4db);
+      transform: scale(1.05);
+    }
+
+    .fish-button:hover::before {
+      transform: translateX(5px);
+    }
   </style>
 </head>
 <body>
@@ -105,6 +142,11 @@
       <div class="section-title">Định hướng học tập</div>
       <p>Đang học thêm về JavaScript, ReactJS và UI/UX. Mong muốn tham gia các cuộc thi lập trình và thực tập tại công ty công nghệ trong năm tới.</p>
     </div>
+  </div>
+
+  <div class="fish-button-container">
+    <div class="fish-button-container">
+  <button class="fish-button" onclick="window.location.href='https://trietluuquocminh-hub.github.io/index2.html'">Chuyển qua xem hồ cá</button>
   </div>
 </body>
 </html>
