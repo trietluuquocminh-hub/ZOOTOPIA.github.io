@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url('https://png.pngtree.com/background/20250314/original/pngtree-vibrant-ocean-life-scene-with-coral-and-plants-picture-image_15974751.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.whale {
+  position: absolute;
+  width: 150px;
+  transition: transform 0.2s linear;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+}
