@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  background-image: url('https://png.pngtree.com/background/20250314/original/pngtree-vibrant-ocean-life-scene-with-coral-and-plants-picture-image_15974751.jpg');
+  background-image: url('https://raw.githubusercontent.com/trietluuquocminh-hub/trietluuquocminh-hub.github.io/main/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,5 +25,18 @@ body {
   height: 10px;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 50%;
+  pointer-events: none;
+}
+.seaweed {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  pointer-events: none;
+  margin-left: 0;
+}
+
+.fish {
+  position: absolute;
+  transition: transform 0.2s linear;
   pointer-events: none;
 }
