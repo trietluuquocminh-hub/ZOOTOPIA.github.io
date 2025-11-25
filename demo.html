@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo DOM API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #content {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ví dụ DOM API</h1>
+    <button id="addTextBtn">Thêm nội dung</button>
+    <button id="changeColorBtn">Đổi màu nền</button>
+    <button id="removeTextBtn">Xóa nội dung</button>
+
+    <div id="content">
+        <p>Nội dung ban đầu</p>
+    </div>
+
+    <script>
+        // Lấy phần tử bằng DOM API
+        const contentDiv = document.getElementById('content');
+        const addTextBtn = document.getElementById('addTextBtn');
+        const changeColorBtn = document.getElementById('changeColorBtn');
+        const removeTextBtn = document.getElementById('removeTextBtn');
+
+        // Thêm nội dung mới
+        addTextBtn.addEventListener('click', () => {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Đây là đoạn văn được thêm bằng DOM API!';
+            contentDiv.appendChild(newParagraph);
+        });
+
+        // Đổi màu nền
+        changeColorBtn.addEventListener('click', () => {
+            contentDiv.style.backgroundColor = 
+                contentDiv.style.backgroundColor === 'lightyellow' ? 'white' : 'lightyellow';
+        });
+
+        // Xóa nội dung
+        removeTextBtn.addEventListener('click', () => {
+            if (contentDiv.lastChild) {
+                contentDiv.removeChild(contentDiv.lastChild);
+            }
+        });
+    </script>
+</body>
+</html>
