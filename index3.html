@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cửa hàng Thiết Bị Điện Tử – Mua iPhone, Samsung, Xiaomi…</title>
+  <meta name="description" content="Cửa hàng thiết bị điện tử: iPhone, Samsung, Xiaomi và phụ kiện. Đăng nhập, giỏ hàng, yêu thích, lọc/tìm kiếm, phân trang, chi tiết sản phẩm." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Trang chủ">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="logo-icon"><path d="M12 2l3 6 6 .9-4.5 4.2 1.1 6.9L12 17l-5.6 3 1.1-6.9L3 8.9 9 8l3-6z" fill="currentColor"/></svg>
+        <div class="logo-text">
+          <span class="logo-title">Cửa hàng Thiết Bị Điện Tử</span>
+          <span class="logo-subtitle">iPhone · Samsung · Phụ kiện</span>
+        </div>
+      </a>
+
+      <nav id="primary-nav" class="nav" aria-label="Điều hướng chính">
+        <ul class="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" href="#" class="nav-link" data-route="home">Trang chủ</a></li>
+          <li role="none"><a role="menuitem" href="#" class="nav-link" data-route="products">Sản phẩm</a></li>
+          <li role="none"><button class="nav-link" id="openCart" aria-haspopup="dialog" aria-label="Mở giỏ hàng">Giỏ hàng <span class="badge" id="cartCount">0</span></button></li>
+          <li role="none"><button class="nav-link" id="openWishlist" aria-haspopup="dialog" aria-label="Mở danh sách yêu thích">Yêu thích</button></li>
+        </ul>
+        <form class="search" role="search" aria-label="Tìm kiếm sản phẩm">
+          <input type="search" name="q" placeholder="Tìm iPhone, Galaxy, phụ kiện..." aria-label="Nhập từ khóa" />
+          <button type="submit" aria-label="Tìm kiếm">Tìm</button>
+        </form>
+      </nav>
+
+      <div class="auth-actions">
+        <button class="btn outline" id="btnLogin" aria-haspopup="dialog">Đăng nhập / Đăng ký</button>
+        <button class="btn outline" id="btnChangePassword" aria-haspopup="dialog" hidden>Đổi mật khẩu</button>
+        <button class="btn outline" id="btnLogout" hidden>Đăng xuất</button>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Mở menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Nâng cấp thiết bị của bạn hôm nay</h1>
+        <p>Giảm giá đến <strong>30%</strong> cho iPhone & Galaxy tuần này. Miễn phí giao hàng nội thành.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#" data-route="products">Mua ngay</a>
+          <a class="btn" href="#deals">Xem ưu đãi</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main id="main" class="container">
+
+    <!-- Filters & sort -->
+    <section class="filters" aria-label="Bộ lọc">
+      <div class="brand-filters" role="group" aria-label="Lọc theo hãng">
+        <button class="chip" data-brand="all" aria-pressed="true">Tất cả</button>
+        <button class="chip" data-brand="Apple">Apple (iPhone)</button>
+        <button class="chip" data-brand="Samsung">Samsung (Galaxy)</button>
+        <button class="chip" data-brand="Xiaomi">Xiaomi</button>
+        <button class="chip" data-brand="Oppo">OPPO</button>
+        <button class="chip" data-brand="OnePlus">OnePlus</button>
+      </div>
+      <div class="sort">
+        <label for="sortSelect">Sắp xếp:</label>
+        <select id="sortSelect" aria-label="Sắp xếp sản phẩm">
+          <option value="popular">Phổ biến</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+          <option value="name">Tên A→Z</option>
+          <option value="new">Hàng mới</option>
+        </select>
+      </div>
+      <div class="price-range">
+        <label>Khoảng giá (₫)</label>
+        <div class="range-inputs">
+          <input type="number" id="priceMin" placeholder="Từ" min="0" step="500000" />
+          <input type="number" id="priceMax" placeholder="Đến" min="0" step="500000" />
+          <button class="btn" id="applyPrice">Áp dụng</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product grid -->
+    <section class="product-grid" id="productGrid" aria-labelledby="products-title">
+      <h2 id="products-title" class="sr-only">Danh sách thiết bị</h2>
+      <!-- Render bằng JS -->
+    </section>
+
+    <!-- Pagination -->
+    <nav class="pagination" aria-label="Phân trang">
+      <button class="btn" id="prevPage" disabled>← Trước</button>
+      <span id="pageInfo">Trang 1</span>
+      <button class="btn" id="nextPage">Sau →</button>
+    </nav>
+
+    <!-- Deals section -->
+    <section id="deals" class="deals">
+      <h2>Ưu đãi nổi bật</h2>
+      <ul class="deal-list">
+        <li>iPhone 15 giảm <strong>2.000.000₫</strong> khi thu cũ đổi mới</li>
+        <li>Galaxy S24 Ultra tặng kèm ốp lưng chính hãng</li>
+        <li>Miễn phí cài đặt & chuyển dữ liệu tại cửa hàng</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Liên hệ</h3>
+        <ul class="contact">
+          <li>Email: <a href="mailto:support@store.local">support@store.local</a></li>
+          <li>Hotline: <a href="tel:0909990999">0909 990 999</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tài khoản</h3>
+        <p id="currentUserLabel" class="current-user" aria-live="polite"></p>
+      </div>
+    </div>
+    <small>© 2025 Cửa hàng Thiết Bị Điện Tử. Mọi quyền được bảo lưu.</small>
+  </footer>
+
+  <!-- Cart drawer -->
+  <dialog id="cartDialog" class="drawer" aria-label="Giỏ hàng">
+    <div class="drawer-inner">
+      <h2>Giỏ hàng</h2>
+      <div id="cartList" class="cart-list"></div>
+      <div class="cart-total">
+        <span>Tạm tính:</span>
+        <strong id="cartTotal">0₫</strong>
+      </div>
+      <div class="drawer-actions">
+        <button class="btn" id="closeCart">Đóng</button>
+        <button class="btn primary" id="checkout">Thanh toán</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Wishlist drawer -->
+  <dialog id="wishlistDialog" class="drawer" aria-label="Yêu thích">
+    <div class="drawer-inner">
+      <h2>Yêu thích</h2>
+      <div id="wishlistList" class="cart-list"></div>
+      <div class="drawer-actions">
+        <button class="btn" id="closeWishlist">Đóng</button>
+        <button class="btn" id="clearWishlist">Xóa tất cả</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Auth dialog -->
+  <dialog id="authDialog" aria-label="Đăng nhập hoặc Đăng ký">
+    <form method="dialog" class="dialog-inner" id="authForm">
+      <h2>Đăng nhập / Đăng ký</h2>
+      <label>Email
+        <input type="email" name="email" required placeholder="name@example.com" />
+      </label>
+      <label>Mật khẩu
+        <input type="password" name="password" required minlength="6" placeholder="Ít nhất 6 ký tự" />
+      </label>
+      <div class="dialog-actions">
+        <button type="submit" data-action="login">Đăng nhập</button>
+        <button type="submit" data-action="register" class="secondary">Đăng ký</button>
+        <button type="button" id="openForgot">Quên mật khẩu</button>
+        <button type="button" id="closeAuth">Đóng</button>
+      </div>
+      <p class="hint">* Demo client-side, không dùng server thật.</p>
+    </form>
+  </dialog>
+
+  <!-- Change password dialog -->
+  <dialog id="changePwdDialog" aria-label="Đổi mật khẩu">
+    <form method="dialog" class="dialog-inner" id="changePwdForm">
+      <h2>Đổi mật khẩu</h2>
+      <label>Mật khẩu hiện tại
+        <input type="password" name="oldPassword" required />
+      </label>
+      <label>Mật khẩu mới
+        <input type="password" name="newPassword" required minlength="6" />
+      </label>
+      <div class="dialog-actions">
+        <button type="submit">Cập nhật</button>
+        <button type="button" id="closeChangePwd">Đóng</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Forgot password dialog (demo) -->
+  <dialog id="forgotDialog" aria-label="Quên mật khẩu">
+    <form method="dialog" class="dialog-inner" id="forgotForm">
+      <h2>Quên mật khẩu</h2>
+      <label>Nhập email đã đăng ký
+        <input type="email" name="email" required placeholder="name@example.com" />
+      </label>
+      <p class="hint">* Demo: hệ thống sẽ tạo mật khẩu tạm thời và hiển thị trực tiếp (không gửi mail).</p>
+      <div id="tempPwdArea" class="temp-pwd" aria-live="polite"></div>
+      <div class="dialog-actions">
+        <button type="submit">Tạo mật khẩu tạm</button>
+        <button type="button" id="closeForgot">Đóng</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
