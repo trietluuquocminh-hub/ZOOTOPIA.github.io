@@ -1,152 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Lưu Quốc Minh Triết - CV Sinh viên CNTT</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
-    }
-    .cv-container {
-      display: flex;
-      max-width: 1000px;
-      margin: 30px auto;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .left-panel {
-      width: 35%;
-      background-color: #d0e7e7;
-      padding: 30px;
-      text-align: center;
-    }
-    .left-panel img {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-    .left-panel h2 {
-      margin: 10px 0 5px;
-      color: #2e8b57;
-    }
-    .left-panel p {
-      margin: 5px 0;
-      font-size: 14px;
-    }
-    .section-title {
-      font-weight: bold;
-      margin-top: 25px;
-      margin-bottom: 10px;
-      color: #2e8b57;
-      border-bottom: 1px solid #aaa;
-      padding-bottom: 5px;
-      text-align: left;
-    }
-    .right-panel {
-      width: 65%;
-      padding: 30px;
-    }
-    .right-panel p, .right-panel li {
-      font-size: 15px;
-      line-height: 1.6;
-    }
-    ul {
-      padding-left: 20px;
-    }
-
-    /* Nút hồ cá */
-    .fish-button-container {
-      text-align: center;
-      margin: 40px 0 60px;
-    }
-
-    .fish-button {
-      background: linear-gradient(to right, #00b4db, #0083b0);
-      color: white;
-      border: none;
-      padding: 14px 28px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 50px;
-      cursor: pointer;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .fish-button::before {
-      content: "🐟";
-      position: absolute;
-      left: -30px;
-      font-size: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .fish-button:hover {
-      background: linear-gradient(to right, #0083b0, #00b4db);
-      transform: scale(1.05);
-    }
-
-    .fish-button:hover::before {
-      transform: translateX(5px);
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cửa hàng Thiết Bị Điện Tử – Mua iPhone, Samsung, Xiaomi…</title>
+  <meta name="description" content="Cửa hàng thiết bị điện tử: iPhone, Samsung, Xiaomi và phụ kiện. Đăng nhập, giỏ hàng, yêu thích, lọc/tìm kiếm, phân trang, chi tiết sản phẩm." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="cv-container">
-    <div class="left-panel">
-      <img src="https://raw.githubusercontent.com/trietluuquocminh-hub/trietluuquocminh-hub.github.io/refs/heads/main/557597474_122253149108223081_8763672589463677429_n.jpg" alt="Ảnh đại diện">
-      <h2>Lưu Quốc Minh Triết</h2>
-      <p>Sinh viên ngành Công nghệ thông tin</p>
-      <p>📞 0793387978</p>
-      <p>📧 trietluuquocminh@gmail.com</p>
-      <p>🎓 Đại học Sư phạm TP.HCM (HCMUE)</p>
-      <p>📍 TP. Hồ Chí Minh</p>
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
 
-      <div class="section-title">Kỹ năng</div>
-      <ul>
-        <li>HTML/CSS cơ bản</li>
-        <li>JavaScript cơ bản</li>
-        <li>Git & GitHub</li>
-        <li>Làm việc nhóm</li>
-        <li>Tư duy logic</li>
-      </ul>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Trang chủ">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="logo-icon"><path d="M12 2l3 6 6 .9-4.5 4.2 1.1 6.9L12 17l-5.6 3 1.1-6.9L3 8.9 9 8l3-6z" fill="currentColor"/></svg>
+        <div class="logo-text">
+          <span class="logo-title">Cửa hàng Thiết Bị Điện Tử</span>
+          <span class="logo-subtitle">iPhone · Samsung · Phụ kiện</span>
+        </div>
+      </a>
 
-      <div class="section-title">Sở thích</div>
-      <ul>
-        <li>Đọc sách công nghệ</li>
-        <li>Tham gia CLB lập trình</li>
-        <li>Thiết kế giao diện web</li>
-      </ul>
+      <nav id="primary-nav" class="nav" aria-label="Điều hướng chính">
+        <ul class="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" href="#" class="nav-link" data-route="home">Trang chủ</a></li>
+          <li role="none"><a role="menuitem" href="#" class="nav-link" data-route="products">Sản phẩm</a></li>
+          <li role="none"><button class="nav-link" id="openCart" aria-haspopup="dialog" aria-label="Mở giỏ hàng">Giỏ hàng <span class="badge" id="cartCount">0</span></button></li>
+          <li role="none"><button class="nav-link" id="openWishlist" aria-haspopup="dialog" aria-label="Mở danh sách yêu thích">Yêu thích</button></li>
+        </ul>
+        <form class="search" role="search" aria-label="Tìm kiếm sản phẩm">
+          <input type="search" name="q" placeholder="Tìm iPhone, Galaxy, phụ kiện..." aria-label="Nhập từ khóa" />
+          <button type="submit" aria-label="Tìm kiếm">Tìm</button>
+        </form>
+      </nav>
+
+      <div class="auth-actions">
+        <button class="btn outline" id="btnLogin" aria-haspopup="dialog">Đăng nhập / Đăng ký</button>
+        <button class="btn outline" id="btnChangePassword" aria-haspopup="dialog" hidden>Đổi mật khẩu</button>
+        <button class="btn outline" id="btnLogout" hidden>Đăng xuất</button>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Mở menu">☰</button>
     </div>
+  </header>
 
-    <div class="right-panel">
-      <div class="section-title">Mục tiêu nghề nghiệp</div>
-      <p>Phát triển kỹ năng lập trình Front-End, tích lũy kinh nghiệm qua dự án cá nhân và hoạt động học thuật. Mong muốn trở thành lập trình viên chuyên nghiệp, đóng góp cho các sản phẩm công nghệ giáo dục.</p>
-
-      <div class="section-title">Học vấn</div>
-      <p><strong>Đại học Sư phạm TP.HCM (HCMUE)</strong> – Ngành Công nghệ thông tin</p>
-      <p>Thời gian: 2025 – 2029</p>
-
-      <div class="section-title">Hoạt động</div>
-      <ul>
-        <li>Thành viên CLB lập trình tại trường</li>
-        <li>Tham gia workshop về Git, GitHub và thiết kế web</li>
-        <li>Thực hiện các dự án nhỏ bằng HTML/CSS</li>
-      </ul>
-
-      <div class="section-title">Định hướng học tập</div>
-      <p>Đang học thêm về JavaScript, ReactJS và UI/UX. Mong muốn tham gia các cuộc thi lập trình và thực tập tại công ty công nghệ trong năm tới.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Nâng cấp thiết bị của bạn hôm nay</h1>
+        <p>Giảm giá đến <strong>30%</strong> cho iPhone & Galaxy tuần này. Miễn phí giao hàng nội thành.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#" data-route="products">Mua ngay</a>
+          <a class="btn" href="#deals">Xem ưu đãi</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"></div>
     </div>
-  </div>
+  </section>
 
-  <div class="fish-button-container">
-    <div class="fish-button-container">
-  <button class="fish-button" onclick="window.location.href='https://trietluuquocminh-hub.github.io/index2.html'">Chuyển qua xem hồ cá</button>
-  </div>
+  <!-- Main -->
+  <main id="main" class="container">
+
+    <!-- Filters & sort -->
+    <section class="filters" aria-label="Bộ lọc">
+      <div class="brand-filters" role="group" aria-label="Lọc theo hãng">
+        <button class="chip" data-brand="all" aria-pressed="true">Tất cả</button>
+        <button class="chip" data-brand="Apple">Apple (iPhone)</button>
+        <button class="chip" data-brand="Samsung">Samsung (Galaxy)</button>
+        <button class="chip" data-brand="Xiaomi">Xiaomi</button>
+        <button class="chip" data-brand="Oppo">OPPO</button>
+        <button class="chip" data-brand="OnePlus">OnePlus</button>
+      </div>
+      <div class="sort">
+        <label for="sortSelect">Sắp xếp:</label>
+        <select id="sortSelect" aria-label="Sắp xếp sản phẩm">
+          <option value="popular">Phổ biến</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+          <option value="name">Tên A→Z</option>
+          <option value="new">Hàng mới</option>
+        </select>
+      </div>
+      <div class="price-range">
+        <label>Khoảng giá (₫)</label>
+        <div class="range-inputs">
+          <input type="number" id="priceMin" placeholder="Từ" min="0" step="500000" />
+          <input type="number" id="priceMax" placeholder="Đến" min="0" step="500000" />
+          <button class="btn" id="applyPrice">Áp dụng</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product grid -->
+    <section class="product-grid" id="productGrid" aria-labelledby="products-title">
+      <h2 id="products-title" class="sr-only">Danh sách thiết bị</h2>
+      <!-- Render bằng JS -->
+    </section>
+
+    <!-- Pagination -->
+    <nav class="pagination" aria-label="Phân trang">
+      <button class="btn" id="prevPage" disabled>← Trước</button>
+      <span id="pageInfo">Trang 1</span>
+      <button class="btn" id="nextPage">Sau →</button>
+    </nav>
+
+    <!-- Deals section -->
+    <section id="deals" class="deals">
+      <h2>Ưu đãi nổi bật</h2>
+      <ul class="deal-list">
+        <li>iPhone 15 giảm <strong>2.000.000₫</strong> khi thu cũ đổi mới</li>
+        <li>Galaxy S24 Ultra tặng kèm ốp lưng chính hãng</li>
+        <li>Miễn phí cài đặt & chuyển dữ liệu tại cửa hàng</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Liên hệ</h3>
+        <ul class="contact">
+          <li>Email: <a href="mailto:support@store.local">support@store.local</a></li>
+          <li>Hotline: <a href="tel:0909990999">0909 990 999</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tài khoản</h3>
+        <p id="currentUserLabel" class="current-user" aria-live="polite"></p>
+      </div>
+    </div>
+    <small>© 2025 Cửa hàng Thiết Bị Điện Tử. Mọi quyền được bảo lưu.</small>
+  </footer>
+
+  <!-- Cart drawer -->
+  <dialog id="cartDialog" class="drawer" aria-label="Giỏ hàng">
+    <div class="drawer-inner">
+      <h2>Giỏ hàng</h2>
+      <div id="cartList" class="cart-list"></div>
+      <div class="cart-total">
+        <span>Tạm tính:</span>
+        <strong id="cartTotal">0₫</strong>
+      </div>
+      <div class="drawer-actions">
+        <button class="btn" id="closeCart">Đóng</button>
+        <button class="btn primary" id="checkout">Thanh toán</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Wishlist drawer -->
+  <dialog id="wishlistDialog" class="drawer" aria-label="Yêu thích">
+    <div class="drawer-inner">
+      <h2>Yêu thích</h2>
+      <div id="wishlistList" class="cart-list"></div>
+      <div class="drawer-actions">
+        <button class="btn" id="closeWishlist">Đóng</button>
+        <button class="btn" id="clearWishlist">Xóa tất cả</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Auth dialog -->
+  <dialog id="authDialog" aria-label="Đăng nhập hoặc Đăng ký">
+    <form method="dialog" class="dialog-inner" id="authForm">
+      <h2>Đăng nhập / Đăng ký</h2>
+      <label>Email
+        <input type="email" name="email" required placeholder="name@example.com" />
+      </label>
+      <label>Mật khẩu
+        <input type="password" name="password" required minlength="6" placeholder="Ít nhất 6 ký tự" />
+      </label>
+      <div class="dialog-actions">
+        <button type="submit" data-action="login">Đăng nhập</button>
+        <button type="submit" data-action="register" class="secondary">Đăng ký</button>
+        <button type="button" id="openForgot">Quên mật khẩu</button>
+        <button type="button" id="closeAuth">Đóng</button>
+      </div>
+      <p class="hint">* Demo client-side, không dùng server thật.</p>
+    </form>
+  </dialog>
+
+  <!-- Change password dialog -->
+  <dialog id="changePwdDialog" aria-label="Đổi mật khẩu">
+    <form method="dialog" class="dialog-inner" id="changePwdForm">
+      <h2>Đổi mật khẩu</h2>
+      <label>Mật khẩu hiện tại
+        <input type="password" name="oldPassword" required />
+      </label>
+      <label>Mật khẩu mới
+        <input type="password" name="newPassword" required minlength="6" />
+      </label>
+      <div class="dialog-actions">
+        <button type="submit">Cập nhật</button>
+        <button type="button" id="closeChangePwd">Đóng</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Forgot password dialog (demo) -->
+  <dialog id="forgotDialog" aria-label="Quên mật khẩu">
+    <form method="dialog" class="dialog-inner" id="forgotForm">
+      <h2>Quên mật khẩu</h2>
+      <label>Nhập email đã đăng ký
+        <input type="email" name="email" required placeholder="name@example.com" />
+      </label>
+      <p class="hint">* Demo: hệ thống sẽ tạo mật khẩu tạm thời và hiển thị trực tiếp (không gửi mail).</p>
+      <div id="tempPwdArea" class="temp-pwd" aria-live="polite"></div>
+      <div class="dialog-actions">
+        <button type="submit">Tạo mật khẩu tạm</button>
+        <button type="button" id="closeForgot">Đóng</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
 </body>
 </html>
