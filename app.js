@@ -1,9 +1,9 @@
 // ====== DỮ LIỆU SẢN PHẨM (SYNTHETIC DEMO) ======
 const products = [
   // Apple
-  { id: 101, brand: 'Apple', name: 'iPhone 13', price: 14990000, rating: 4.6, img: 'https://via.placeholder.com/600x600?text=iPhone+13', isNew: false },
-  { id: 102, brand: 'Apple', name: 'iPhone 14', price: 17990000, rating: 4.7, img: 'https://via.placeholder.com/600x600?text=iPhone+14', isNew: false },
-  { id: 103, brand: 'Apple', name: 'iPhone 15', price: 21990000, rating: 4.8, img: 'https://via.placeholder.com/600x600?text=iPhone+15', isNew: true },
+  { id: 101, brand: 'Apple', name: 'iPhone 16', price: 14990000, rating: 4.6, img: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTSlt8n0_dvlqj9eNBgWd5zhEcsMbqdEotxctu0vLrAm5bqMcUo5zrWMhwLgd1ci-ZTEP7mtLga6fdVwip3uvhhY2D4Hz_5GA8Mn5zwImgodYE4f7gzx4SaFifHOoXjkZBeql5utSC-CIGl&usqp=CAc', isNew: false },
+  { id: 102, brand: 'Apple', name: 'iPhone 17', price: 17990000, rating: 4.7, img: 'https://via.placeholder.com/600x600?text=iPhone+14', isNew: false },
+  { id: 103, brand: 'Apple', name: 'iPhone 17', price: 21990000, rating: 4.8, img: 'https://via.placeholder.com/600x600?text=iPhone+15', isNew: true },
   { id: 104, brand: 'Apple', name: 'iPhone 15 Pro', price: 29990000, rating: 4.9, img: 'https://via.placeholder.com/600x600?text=iPhone+15+Pro', isNew: true },
   { id: 105, brand: 'Apple', name: 'AirPods Pro (2nd)', price: 5990000, rating: 4.6, img: 'https://via.placeholder.com/600x600?text=AirPods+Pro+2', isNew: false },
   // Samsung

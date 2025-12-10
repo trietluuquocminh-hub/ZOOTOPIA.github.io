@@ -124,3 +124,139 @@ dialog { border: 1px solid var(--border); border-radius: 16px; padding: 0; max-w
   .product-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) { .product-grid { grid-template-columns: 1fr; } }
+/* ====== Animations & Effects ====== */
+
+/* --- 1. Card hover: zoom ảnh + nâng card --- */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+.card img {
+  transition: transform 0.3s ease;
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* --- 2. Nút Add to cart bật nhẹ (bounce) khi rê chuột --- */
+.btn.primary {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37,99,235,0.35);
+}
+.btn.primary:active {
+  transform: scale(0.96);
+}
+
+/* --- 3. Hiệu ứng nhấp nháy “sale” nhẹ cho badge-corner --- */
+@keyframes pulse-sale {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.12); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.badge-corner {
+  animation: pulse-sale 1.4s infinite ease-in-out;
+}
+
+/* --- 4. Fade-in sản phẩm khi tải trang --- */
+.product-grid .card {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+.product-grid .card:nth-child(2) { animation-delay: 0.1s }
+.product-grid .card:nth-child(3) { animation-delay: 0.2s }
+.product-grid .card:nth-child(4) { animation-delay: 0.3s }
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- 5. Hiệu ứng hover nav link dưới dạng gạch chân trượt --- */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+/* --- 6. Search input: focus sáng nhẹ --- */
+.search input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.25);
+  outline: none;
+}
+
+/* --- 7. Hiệu ứng icon “thả tim” khi active --- */
+.action-icon {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.action-icon.active {
+  transform: scale(1.25);
+  color: var(--primary);
+}
+
+/* --- 8. Hero art hiệu ứng sáng quanh --- */
+.hero-art {
+  animation: heroGlow 6s infinite linear;
+}
+@keyframes heroGlow {
+  0% { box-shadow: 0 0 0 rgba(37,99,235,0.22); }
+  50% { box-shadow: 0 0 24px rgba(34,197,94,0.25); }
+  100% { box-shadow: 0 0 0 rgba(37,99,235,0.22); }
+}
+
+/* --- 9. Button outline hover fill --- */
+.btn.outline {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn.outline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* --- 10. Pagination: hover nhô lên nhẹ --- */
+.pagination button,
+.pagination a {
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.pagination button:hover,
+.pagination a:hover {
+  transform: translateY(-3px);
+  background: var(--primary);
+  color: #fff;
+}
+
+/* --- 11. Dialog mở ra với hiệu ứng scale --- */
+dialog[open] {
+  animation: dialogShow 0.35s ease;
+}
+@keyframes dialogShow {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
