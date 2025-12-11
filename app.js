@@ -1,43 +1,25 @@
 // ====== DỮ LIỆU SẢN PHẨM (SYNTHETIC DEMO) ======
 const products = [
   // Apple
-  { id: 101, brand: 'Apple', name: 'iPhone 16', price: 14990000, rating: 4.6, img: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTSlt8n0_dvlqj9eNBgWd5zhEcsMbqdEotxctu0vLrAm5bqMcUo5zrWMhwLgd1ci-ZTEP7mtLga6fdVwip3uvhhY2D4Hz_5GA8Mn5zwImgodYE4f7gzx4SaFifHOoXjkZBeql5utSC-CIGl&usqp=CAc', isNew: false },
-  { id: 102, brand: 'Apple', name: 'iPhone 17', price: 17990000, rating: 4.7, img: 'https://via.placeholder.com/600x600?text=iPhone+14', isNew: false },
-  { id: 103, brand: 'Apple', name: 'iPhone 17', price: 21990000, rating: 4.8, img: 'https://via.placeholder.com/600x600?text=iPhone+15', isNew: true },
-  { id: 104, brand: 'Apple', name: 'iPhone 15 Pro', price: 29990000, rating: 4.9, img: 'https://via.placeholder.com/600x600?text=iPhone+15+Pro', isNew: true },
-  { id: 105, brand: 'Apple', name: 'AirPods Pro (2nd)', price: 5990000, rating: 4.6, img: 'https://via.placeholder.com/600x600?text=AirPods+Pro+2', isNew: false },
+  { id: 101, brand: 'Apple', name: 'iPhone 17', price: 14990000, rating: 4.6, img: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSE74efuBUlp0UiOTjqGb-i8lqouw542Gby-uqrYFFO3zCR1FSqYp5Ydsf_AVavLRVlT9CdWiumrSmOBwuwuMT8cL3LGGVHo5sizRTvn49VOBsJi1p47IYlO0jlziElQ8CdauKsfC2K&usqp=CAc', isNew: false },
+  { id: 102, brand: 'Apple', name: 'iPhone 17 Pro', price: 17990000, rating: 4.7, img: '', isNew: false },
+  { id: 103, brand: 'Apple', name: 'iPhone 16 Pro', price: 21990000, rating: 4.8, img: '', isNew: true },
+  { id: 104, brand: 'Apple', name: 'iPhone 16 Pro', price: 29990000, rating: 4.9, img: '', isNew: true },
   // Samsung
-  { id: 201, brand: 'Samsung', name: 'Galaxy S23', price: 16990000, rating: 4.6, img: 'https://via.placeholder.com/600x600?text=Galaxy+S23', isNew: false },
-  { id: 202, brand: 'Samsung', name: 'Galaxy S24', price: 20990000, rating: 4.7, img: 'https://via.placeholder.com/600x600?text=Galaxy+S24', isNew: true },
-  { id: 203, brand: 'Samsung', name: 'Galaxy S24 Ultra', price: 32990000, rating: 4.9, img: 'https://via.placeholder.com/600x600?text=S24+Ultra', isNew: true },
-  { id: 204, brand: 'Samsung', name: 'Galaxy A55', price: 9990000, rating: 4.4, img: 'https://via.placeholder.com/600x600?text=Galaxy+A55', isNew: false },
-  { id: 205, brand: 'Samsung', name: 'Galaxy Buds2 Pro', price: 4490000, rating: 4.4, img: 'https://via.placeholder.com/600x600?text=Buds2+Pro', isNew: false },
+  { id: 201, brand: 'Samsung', name: 'Galaxy S23', price: 16990000, rating: 4.6, img: '', isNew: false },
+  { id: 202, brand: 'Samsung', name: 'Galaxy S24', price: 20990000, rating: 4.7, img: '', isNew: true },
+  { id: 203, brand: 'Samsung', name: 'Galaxy S24 Ultra', price: 32990000, rating: 4.9, img: '', isNew: true },
+  { id: 205, brand: 'Samsung', name: 'Galaxy Buds2 Pro', price: 4490000, rating: 4.4, img: '', isNew: false },
   // Xiaomi
-  { id: 301, brand: 'Xiaomi', name: 'Xiaomi 13', price: 12990000, rating: 4.5, img: 'https://via.placeholder.com/600x600?text=Xiaomi+13', isNew: false },
-  { id: 302, brand: 'Xiaomi', name: 'Xiaomi 14', price: 15990000, rating: 4.6, img: 'https://via.placeholder.com/600x600?text=Xiaomi+14', isNew: true },
-  { id: 303, brand: 'Xiaomi', name: 'Redmi Note 13', price: 6990000, rating: 4.3, img: 'https://via.placeholder.com/600x600?text=Redmi+Note+13', isNew: true },
-  { id: 304, brand: 'Xiaomi', name: 'Mi Band 8', price: 890000, rating: 4.2, img: 'https://via.placeholder.com/600x600?text=Mi+Band+8', isNew: false },
+  { id: 301, brand: 'Xiaomi', name: 'Xiaomi 17 Pro Max', price: 12990000, rating: 4.5, img: '', isNew: false },
+  { id: 302, brand: 'Xiaomi', name: 'Xiaomi Redmi K90 Pro Max', price: 15990000, rating: 4.6, img: '', isNew: true },
+  { id: 303, brand: 'Xiaomi', name: 'Xiaomi 15 Ultra', price: 6990000, rating: 4.3, img: '', isNew: true },
   // Oppo
-  { id: 401, brand: 'Oppo', name: 'Oppo Reno 12', price: 10990000, rating: 4.4, img: 'https://via.placeholder.com/600x600?text=Reno+12', isNew: true },
-  { id: 402, brand: 'Oppo', name: 'Oppo Find N3', price: 35990000, rating: 4.7, img: 'https://via.placeholder.com/600x600?text=Find+N3', isNew: false },
+  { id: 401, brand: 'Oppo', name: 'OPPO Find X9 Pro', price: 10990000, rating: 4.4, img: '', isNew: true },
+  { id: 402, brand: 'Oppo', name: 'Oppo Find X8', price: 35990000, rating: 4.7, img: '', isNew: false },
   // OnePlus
-  { id: 501, brand: 'OnePlus', name: 'OnePlus 12', price: 18990000, rating: 4.6, img: 'https://via.placeholder.com/600x600?text=OnePlus+12', isNew: true },
-  { id: 502, brand: 'OnePlus', name: 'OnePlus Buds Pro 2', price: 3990000, rating: 4.4, img: 'https://via.placeholder.com/600x600?text=Buds+Pro+2', isNew: false },
-  // Phụ kiện khác
-  { id: 601, brand: 'Other', name: 'Anker Power Bank 20K', price: 1090000, rating: 4.3, img: 'https://via.placeholder.com/600x600?text=Power+Bank', isNew: false },
-  { id: 602, brand: 'Other', name: 'Belkin 3-in-1 Charger', price: 2490000, rating: 4.5, img: 'https://via.placeholder.com/600x600?text=Belkin+Charger', isNew: false },
-  { id: 603, brand: 'Other', name: 'Ugreen USB-C Cable', price: 199000, rating: 4.4, img: 'https://via.placeholder.com/600x600?text=USB-C+Cable', isNew: false },
-  // thêm để đủ > 24 sản phẩm
-  { id: 701, brand: 'Apple', name: 'iPhone 16 (demo)', price: 25990000, rating: 4.8, img: 'https://via.placeholder.com/600x600?text=iPhone+16', isNew: true },
-  { id: 702, brand: 'Samsung', name: 'Galaxy Z Flip5', price: 22990000, rating: 4.7, img: 'https://via.placeholder.com/600x600?text=Z+Flip5', isNew: false },
-  { id: 703, brand: 'Samsung', name: 'Galaxy Z Fold5', price: 38990000, rating: 4.8, img: 'https://via.placeholder.com/600x600?text=Z+Fold5', isNew: false },
-  { id: 704, brand: 'Xiaomi', name: 'POCO F6', price: 10990000, rating: 4.5, img: 'https://via.placeholder.com/600x600?text=POCO+F6', isNew: true },
-  { id: 705, brand: 'Oppo', name: 'Oppo A79', price: 6990000, rating: 4.2, img: 'https://via.placeholder.com/600x600?text=Oppo+A79', isNew: false },
-  { id: 706, brand: 'OnePlus', name: 'OnePlus Nord CE 4', price: 8990000, rating: 4.3, img: 'https://via.placeholder.com/600x600?text=Nord+CE+4', isNew: true },
-  { id: 707, brand: 'Apple', name: 'MagSafe Charger', price: 1190000, rating: 4.6, img: 'https://via.placeholder.com/600x600?text=MagSafe', isNew: false },
-  { id: 708, brand: 'Samsung', name: 'Galaxy Watch6', price: 6990000, rating: 4.5, img: 'https://via.placeholder.com/600x600?text=Watch6', isNew: true },
-  { id: 709, brand: 'Xiaomi', name: 'Xiaomi Pad 6', price: 8990000, rating: 4.4, img: 'https://via.placeholder.com/600x600?text=Pad+6', isNew: false },
-  { id: 710, brand: 'Other', name: 'Logitech MX Master 3S', price: 2490000, rating: 4.8, img: 'https://via.placeholder.com/600x600?text=MX+Master+3S', isNew: true },
+  { id: 501, brand: 'OnePlus', name: 'OnePlus 13T 5G', price: 18990000, rating: 4.6, img: '', isNew: true },
+  { id: 502, brand: 'OnePlus', name: 'OnePlus ACE 5 Ultra', price: 3990000, rating: 4.4, img: '', isNew: false },
 ];
 
 // ====== TIỆN ÍCH ======
