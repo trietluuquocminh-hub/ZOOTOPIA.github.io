@@ -1,26 +1,237 @@
+
 // ====== DỮ LIỆU SẢN PHẨM (SYNTHETIC DEMO) ======
 const products = [
   // Apple
-  { id: 101, brand: 'Apple', name: 'iPhone 17', price: 14990000, rating: 4.6, img: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSE74efuBUlp0UiOTjqGb-i8lqouw542Gby-uqrYFFO3zCR1FSqYp5Ydsf_AVavLRVlT9CdWiumrSmOBwuwuMT8cL3LGGVHo5sizRTvn49VOBsJi1p47IYlO0jlziElQ8CdauKsfC2K&usqp=CAc', isNew: false },
-  { id: 102, brand: 'Apple', name: 'iPhone 17 Pro', price: 17990000, rating: 4.7, img: '', isNew: false },
-  { id: 103, brand: 'Apple', name: 'iPhone 16 Pro', price: 21990000, rating: 4.8, img: '', isNew: true },
-  { id: 104, brand: 'Apple', name: 'iPhone 16 Pro', price: 29990000, rating: 4.9, img: '', isNew: true },
+  {
+    id: 101, brand: 'Apple', name: 'iPhone 17', price: 14990000, rating: 4.6,
+    img: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSE74efuBUlp0UiOTjqGb-i8lqouw542Gby-uqrYFFO3zCR1FSqYp5Ydsf_AVavLRVlT9CdWiumrSmOBwuwuMT8cL3LGGVHo5sizRTvn49VOBsJi1p47IYlO0jlziElQ8CdauKsfC2K&usqp=CAc',
+    isNew: false,
+    specs: {
+      'Màn hình': 'OLED 6.1" 120Hz, HDR',
+      'Chip xử lý': 'Apple A18 Bionic',
+      'RAM/Lưu trữ': '8GB / 128–256GB',
+      'Camera': 'Chính 48MP, Ultra‑wide 12MP; quay 4K60',
+      'Pin & Sạc': '3600mAh, sạc nhanh 35W, sạc MagSafe',
+      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
+      'Chống nước': 'IP68',
+      'Bảo mật': 'Face ID',
+      'Khối lượng': '≈ 175g'
+    }
+  },
+  {
+    id: 102, brand: 'Apple', name: 'iPhone 17 Pro', price: 17990000, rating: 4.7,
+    img: '', isNew: false,
+    specs: {
+      'Màn hình': 'OLED 6.1" ProMotion 1–120Hz',
+      'Chip xử lý': 'Apple A18 Pro',
+      'RAM/Lưu trữ': '8–12GB / 256–1TB',
+      'Camera': '48MP + Tele 12MP (3x) + Ultra‑wide 12MP',
+      'Pin & Sạc': '3800mAh, 35W, MagSafe',
+      'Vật liệu': 'Khung titan',
+      'Kết nối': '5G, Wi‑Fi 7, BT 5.3, UWB',
+      'Chống nước': 'IP68',
+      'Bảo mật': 'Face ID',
+      'Khối lượng': '≈ 190g'
+    }
+  },
+  {
+    id: 103, brand: 'Apple', name: 'iPhone 16 Pro', price: 21990000, rating: 4.8,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'OLED 6.1" ProMotion 120Hz',
+      'Chip xử lý': 'Apple A17 Pro',
+      'RAM/Lưu trữ': '8GB / 256–1TB',
+      'Camera': '48MP + Tele 12MP (5x) + Ultra‑wide 12MP',
+      'Pin & Sạc': '3300mAh, 27W, MagSafe',
+      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, UWB',
+      'Chống nước': 'IP68',
+      'Bảo mật': 'Face ID',
+      'Khối lượng': '≈ 187g'
+    }
+  },
+  {
+    id: 104, brand: 'Apple', name: 'iPhone 16 Pro', price: 29990000, rating: 4.9,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'OLED 6.7" ProMotion 120Hz',
+      'Chip xử lý': 'Apple A17 Pro',
+      'RAM/Lưu trữ': '8GB / 256–1TB',
+      'Camera': '48MP + Tele 12MP (5x) + Ultra‑wide 12MP',
+      'Pin & Sạc': '4500mAh, 30W, MagSafe',
+      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, UWB',
+      'Chống nước': 'IP68',
+      'Bảo mật': 'Face ID',
+      'Khối lượng': '≈ 205g'
+    }
+  },
+
   // Samsung
-  { id: 201, brand: 'Samsung', name: 'Galaxy S23', price: 16990000, rating: 4.6, img: '', isNew: false },
-  { id: 202, brand: 'Samsung', name: 'Galaxy S24', price: 20990000, rating: 4.7, img: '', isNew: true },
-  { id: 203, brand: 'Samsung', name: 'Galaxy S24 Ultra', price: 32990000, rating: 4.9, img: '', isNew: true },
-  { id: 205, brand: 'Samsung', name: 'Galaxy Buds2 Pro', price: 4490000, rating: 4.4, img: '', isNew: false },
+  {
+    id: 201, brand: 'Samsung', name: 'Galaxy S23', price: 16990000, rating: 4.6,
+    img: '', isNew: false,
+    specs: {
+      'Màn hình': 'Dynamic AMOLED 2X 6.1" 120Hz',
+      'Chip xử lý': 'Snapdragon 8 Gen 2 for Galaxy',
+      'RAM/Lưu trữ': '8GB / 128–256GB',
+      'Camera': '50MP + 12MP (UW) + 10MP (3x)',
+      'Pin & Sạc': '3900mAh, 25W, sạc không dây 15W',
+      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
+      'Chống nước': 'IP68',
+      'Bảo mật': 'Vân tay siêu âm, Face Unlock',
+      'Khối lượng': '≈ 168g'
+    }
+  },
+  {
+    id: 202, brand: 'Samsung', name: 'Galaxy S24', price: 20990000, rating: 4.7,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'Dynamic AMOLED 2X 6.2" 1–120Hz',
+      'Chip xử lý': 'Snapdragon 8 Gen 3 for Galaxy',
+      'RAM/Lưu trữ': '8GB / 256GB',
+      'Camera': '50MP + 12MP (UW) + 10MP (3x)',
+      'Pin & Sạc': '4000mAh, 45W, không dây 15W',
+      'Kết nối': '5G, Wi‑Fi 7, BT 5.3, NFC, UWB',
+      'Chống nước': 'IP68',
+      'Bảo mật': 'Vân tay siêu âm, Face Unlock',
+      'Khối lượng': '≈ 167g'
+    }
+  },
+  {
+    id: 203, brand: 'Samsung', name: 'Galaxy S24 Ultra', price: 32990000, rating: 4.9,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'Dynamic AMOLED 2X 6.8" LTPO 1–120Hz',
+      'Chip xử lý': 'Snapdragon 8 Gen 3 for Galaxy',
+      'RAM/Lưu trữ': '12GB / 256–1TB',
+      'Camera': '200MP + 12MP (UW) + 10MP (3x) + 50MP (5x)',
+      'Pin & Sạc': '5000mAh, 45W, không dây 15W',
+      'Kết nối': '5G, Wi‑Fi 7, BT 5.3, NFC, UWB',
+      'Bút': 'S‑Pen hỗ trợ',
+      'Chống nước': 'IP68',
+      'Bảo mật': 'Vân tay siêu âm',
+      'Khối lượng': '≈ 232g'
+    }
+  },
+  {
+    id: 205, brand: 'Samsung', name: 'Galaxy Buds2 Pro', price: 4490000, rating: 4.4,
+    img: '', isNew: false,
+    specs: {
+      'Kiểu': 'Tai nghe True Wireless',
+      'Driver': '2‑way dynamic',
+      'Chống ồn': 'ANC 3 mức + Ambient',
+      'Thời lượng pin': 'Tai nghe ~8h, kèm hộp ~29h',
+      'Sạc': 'USB‑C, sạc không dây',
+      'Kết nối': 'BT 5.3, SSC HiFi, AAC, SBC',
+      'Kháng nước': 'IPX7',
+      'Khối lượng': '≈ 19.9g (cặp)'
+    }
+  },
+
   // Xiaomi
-  { id: 301, brand: 'Xiaomi', name: 'Xiaomi 17 Pro Max', price: 12990000, rating: 4.5, img: '', isNew: false },
-  { id: 302, brand: 'Xiaomi', name: 'Xiaomi Redmi K90 Pro Max', price: 15990000, rating: 4.6, img: '', isNew: true },
-  { id: 303, brand: 'Xiaomi', name: 'Xiaomi 15 Ultra', price: 6990000, rating: 4.3, img: '', isNew: true },
+  {
+    id: 301, brand: 'Xiaomi', name: 'Xiaomi 17 Pro Max', price: 12990000, rating: 4.5,
+    img: '', isNew: false,
+    specs: {
+      'Màn hình': 'AMOLED 6.67" 120Hz',
+      'Chip xử lý': 'Dimensity 9300 / Snapdragon 8 Gen 3 (tuỳ thị trường)',
+      'RAM/Lưu trữ': '12GB / 256–512GB UFS 4.0',
+      'Camera': '50MP + 50MP (UW) + 64MP (3x)',
+      'Pin & Sạc': '5000mAh, 120W có dây, 50W không dây',
+      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC, IR blaster',
+      'Chống nước': 'IP68',
+      'Khối lượng': '≈ 210g'
+    }
+  },
+  {
+    id: 302, brand: 'Xiaomi', name: 'Xiaomi Redmi K90 Pro Max', price: 15990000, rating: 4.6,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'AMOLED 6.67" 120Hz, 1.5K',
+      'Chip xử lý': 'Snapdragon 8 Gen 3',
+      'RAM/Lưu trữ': '12–16GB / 256–1TB',
+      'Camera': '50MP OIS + 8MP (UW) + 12MP (2x)',
+      'Pin & Sạc': '5000mAh, 120W',
+      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC',
+      'Kháng bụi nước': 'IP64',
+      'Khối lượng': '≈ 198g'
+    }
+  },
+  {
+    id: 303, brand: 'Xiaomi', name: 'Xiaomi 15 Ultra', price: 6990000, rating: 4.3,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'AMOLED 6.73" LTPO 1–120Hz',
+      'Chip xử lý': 'Snapdragon 8 Gen 2',
+      'RAM/Lưu trữ': '12GB / 256–512GB',
+      'Camera': '50MP Leica + 48MP periscope (5x) + 50MP UW',
+      'Pin & Sạc': '5000mAh, 90W có dây, 50W không dây',
+      'Kết nối': '5G, Wi‑Fi 6, BT 5.2, NFC',
+      'Chống nước': 'IP68',
+      'Khối lượng': '≈ 225g'
+    }
+  },
+
   // Oppo
-  { id: 401, brand: 'Oppo', name: 'OPPO Find X9 Pro', price: 10990000, rating: 4.4, img: '', isNew: true },
-  { id: 402, brand: 'Oppo', name: 'Oppo Find X8', price: 35990000, rating: 4.7, img: '', isNew: false },
+  {
+    id: 401, brand: 'Oppo', name: 'OPPO Find X9 Pro', price: 10990000, rating: 4.4,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'AMOLED 6.8" LTPO 1–120Hz',
+      'Chip xử lý': 'Snapdragon 8 Gen 3',
+      'RAM/Lưu trữ': '12–16GB / 256–512GB',
+      'Camera': '50MP + 64MP periscope (5x) + 48MP (UW), Hasselblad',
+      'Pin & Sạc': '5000mAh, 100W SuperVOOC, 50W không dây',
+      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC',
+      'Chống nước': 'IP68',
+      'Khối lượng': '≈ 214g'
+    }
+  },
+  {
+    id: 402, brand: 'Oppo', name: 'Oppo Find X8', price: 35990000, rating: 4.7,
+    img: '', isNew: false,
+    specs: {
+      'Màn hình': 'AMOLED 6.7" 120Hz',
+      'Chip xử lý': 'Snapdragon 8 Gen 2',
+      'RAM/Lưu trữ': '12GB / 256–512GB',
+      'Camera': '50MP + 50MP (UW) + 32MP (2x)',
+      'Pin & Sạc': '4800mAh, 80W SuperVOOC',
+      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
+      'Chống nước': 'IP68',
+      'Khối lượng': '≈ 195g'
+    }
+  },
+
   // OnePlus
-  { id: 501, brand: 'OnePlus', name: 'OnePlus 13T 5G', price: 18990000, rating: 4.6, img: '', isNew: true },
-  { id: 502, brand: 'OnePlus', name: 'OnePlus ACE 5 Ultra', price: 3990000, rating: 4.4, img: '', isNew: false },
+  {
+    id: 501, brand: 'OnePlus', name: 'OnePlus 13T 5G', price: 18990000, rating: 4.6,
+    img: '', isNew: true,
+    specs: {
+      'Màn hình': 'AMOLED 6.74" 120Hz, 1.5K',
+      'Chip xử lý': 'Snapdragon 8 Gen 3',
+      'RAM/Lưu trữ': '12–16GB / 256–512GB UFS 4.0',
+      'Camera': '50MP OIS + 48MP (UW) + 64MP (3x)',
+      'Pin & Sạc': '5500mAh, 100W SuperVOOC, 50W không dây',
+      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC',
+      'Chống nước': 'IP65/IP68 (tuỳ bản)',
+      'Khối lượng': '≈ 206g'
+    }
+  },
+  {
+    id: 502, brand: 'OnePlus', name: 'OnePlus ACE 5 Ultra', price: 3990000, rating: 4.4,
+    img: '', isNew: false,
+    specs: {
+      'Màn hình': 'AMOLED 6.74" 120Hz',
+      'Chip xử lý': 'Dimensity 9200 / 9300',
+      'RAM/Lưu trữ': '12GB / 256GB',
+      'Camera': '50MP + 8MP (UW) + 2MP',
+      'Pin & Sạc': '5000mAh, 150W SUPERVOOC',
+      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
+      'Kháng nước': 'IP64',
+      'Khối lượng': '≈ 200g'
+    }
+  }
 ];
+
 
 // ====== TIỆN ÍCH ======
 const formatVND = (n) => n.toLocaleString('vi-VN') + '₫';
@@ -184,13 +395,6 @@ function renderWishlist() {
   }
   list.appendChild(frag);
 }
-
-// ====== CHI TIẾT SẢN PHẨM (modal nhanh bằng alert hoặc custom) ======
-function showDetail(id) {
-  const p = products.find(x => x.id === id); if (!p) return;
-  alert(`${p.name}\nHãng: ${p.brand}\nGiá: ${formatVND(p.price)}\nĐánh giá: ${p.rating}`);
-}
-
 // ====== SỰ KIỆN & KHỞI TẠO ======
 window.addEventListener('DOMContentLoaded', () => {
   // Menu di động
@@ -247,7 +451,11 @@ window.addEventListener('DOMContentLoaded', () => {
   qs('#productGrid')?.addEventListener('click', (e) => {
     const btn = e.target.closest('button'); if (!btn) return; const id = Number(btn.dataset.id);
     if (btn.classList.contains('add-cart')) addToCart(id);
-    if (btn.classList.contains('view-detail')) showDetail(id);
+    
+    if (btn.classList.contains('view-detail')) {
+        location.hash = `#/product/${id}`;
+    }
+
     if (btn.classList.contains('wishlist-btn')) { toggleWishlist(id); btn.classList.toggle('active'); }
   });
 
