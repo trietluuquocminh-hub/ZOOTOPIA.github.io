@@ -471,3 +471,69 @@ window.addEventListener('DOMContentLoaded', () => {
 
   refreshAuthUI();
 });
+
+// Thứ tự hiển thị gợi ý (tuỳ chọn, để bảng luôn nhất quán)
+const SPEC_ORDER = [
+  'Màn hình', 'Chip xử lý', 'RAM/Lưu trữ', 'Camera',
+  'Pin & Sạc', 'Kết nối', 'Chống nước', 'Bảo mật', 'Khối lượng'
+];
+
+// Hàm tạo bảng thông số và mở dialog
+function openProductDetail(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+
+  // Gán thông tin cơ bản
+  qs('#detailImg').src = p.img || '';
+  qs('#detailImg').alt = `${p.name} - ${p.brand}`;
+  qs('#detailTitle').textContent = p.name;
+  qs('#detailBrand').textContent = p.brand;
+  qs('#detailPrice').textContent = formatVND(p.price);
+  qs('#detailRating').textContent = `★ ${p.rating}`;
+
+  // Tạo bảng từ p.specs
+  const tbody = qs('#specTable tbody');
+  tbody.innerHTML = '';
+
+  const keys = Object.keys(p.specs || {});
+  const orderedKeys = [
+    ...SPEC_ORDER.filter(k => keys.includes(k)),
+    ...keys.filter(k => !SPEC_ORDER.includes(k))
+  ];
+
+  for (const k of orderedKeys) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${k}</td><td>${p.specs[k]}</td>`;
+    tbody.appendChild(tr);
+  }
+
+  // Nút thêm vào giỏ trong dialog
+  qs('#detailAddCart').onclick = () => addToCart(p.id);
+
+  // Mở dialog
+  const dlg = qs('#productDetailDialog');
+  dlg.showModal();
+
+  // Đóng dialog
+  const close = () => dlg.close();
+  qs('#detailClose').onclick = close;
+  qs('#detailClose2').onclick = close;
+}
+
+qs('#productGrid')?.addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  const id = Number(btn.dataset.id);
+
+  if (btn.classList.contains('add-cart')) addToCart(id);
+
+  if (btn.classList.contains('view-detail')) {
+    // LỆNH cần dùng: gọi hàm mở dialog và tạo bảng
+    openProductDetail(id);
+  }
+
+  if (btn.classList.contains('wishlist-btn')) {
+    toggleWishlist(id);
+    btn.classList.toggle('active');
+  }
+});

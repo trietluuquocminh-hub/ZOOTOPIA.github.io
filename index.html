@@ -217,5 +217,36 @@
 
   <script src="app.js"></script>
   
+<!-- ===== Product Detail Dialog ===== -->
+<dialog id="productDetailDialog" class="dialog">
+  <div class="dialog-inner">
+    <div class="detail-layout">
+      <div class="detail-media">
+        <img id="detailImg" src="" alt="" />
+      </div>
+      <div class="detail-info">
+        <h2 id="detailTitle"></h2>
+        <div class="brand" id="detailBrand"></div>
+        <div class="price" id="detailPrice"></div>
+        <div class="rating" id="detailRating"></div>
+
+        <div class="detail-actions">
+          <button class="btn primary" id="detailAddCart">Thêm vào giỏ</button>
+          <button class="btn outline" id="detailClose">Đóng</button>
+        </div>
+      </div>
+    </div>
+
+    <h3>Thông số kỹ thuật</h3>
+    <table class="spec-table" id="specTable">
+      <tbody></tbody>
+    </table>
+
+    <div class="dialog-actions">
+      <button class="btn" id="detailClose2">Đóng</button>
+    </div>
+  </div>
+</dialog>
+
 </body>
 </html>
