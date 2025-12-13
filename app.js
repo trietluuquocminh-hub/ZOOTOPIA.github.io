@@ -53,7 +53,7 @@ const products = [
   },
   {
     id: 104, brand: 'Apple', name: 'iPhone 16 Pro Max', price: 31590000, rating: 4.9,
-    img: 'https://cdn.tgdd.vn/Products/Images/42/329149/s16/iphone-16-pro-max-16-titan-tu-nhien-thumbnew-650x650.png', isNew: true,
+    img: 'https://cdn.tgdd.vn/Products/Images/42/329149/s16/iphone-16-pro-max-16-titan-tu-nhien-thumbnew-650x650.png', isNew: false,
     specs: {
       'Màn hình': 'OLED 6.7 inch Super Retina XDR Công nghệ ProMotion với tốc độ làm mới thích ứng lên đến 120Hz',
       'Chip xử lý': 'Apple A17 Pro',
