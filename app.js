@@ -462,18 +462,6 @@ window.addEventListener('DOMContentLoaded', () => {
     location.href = 'checkout.html';
   });
 
-  // Delegation for product grid buttons
-  qs('#productGrid')?.addEventListener('click', (e) => {
-    const btn = e.target.closest('button'); if (!btn) return; const id = Number(btn.dataset.id);
-    if (btn.classList.contains('add-cart')) addToCart(id);
-    
-    if (btn.classList.contains('view-detail')) {
-        location.hash = `#/product/${id}`;
-    }
-
-    if (btn.classList.contains('wishlist-btn')) { toggleWishlist(id); btn.classList.toggle('active'); }
-  });
-
   // Delegation for cart & wishlist items
   qs('#cartList')?.addEventListener('click', (e) => {
     const btn = e.target.closest('button'); if (!btn) return; const id = Number(btn.dataset.id);
