@@ -3,63 +3,65 @@
 const products = [
   // Apple
   {
-    id: 101, brand: 'Apple', name: 'iPhone 17', price: 14990000, rating: 4.6,
-    img: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSE74efuBUlp0UiOTjqGb-i8lqouw542Gby-uqrYFFO3zCR1FSqYp5Ydsf_AVavLRVlT9CdWiumrSmOBwuwuMT8cL3LGGVHo5sizRTvn49VOBsJi1p47IYlO0jlziElQ8CdauKsfC2K&usqp=CAc',
-    isNew: false,
+    id: 101, brand: 'Apple', name: 'iPhone 17', price: 24990000, rating: 4.6,
+    img: 'https://cdn.tgdd.vn/Products/Images/42/342667/s16/iphone-17-tim-thumb-650x650.png',
+    isNew: true,
     specs: {
-      'Màn hình': 'OLED 6.1" 120Hz, HDR',
-      'Chip xử lý': 'Apple A18 Bionic',
-      'RAM/Lưu trữ': '8GB / 128–256GB',
-      'Camera': 'Chính 48MP, Ultra‑wide 12MP; quay 4K60',
-      'Pin & Sạc': '3600mAh, sạc nhanh 35W, sạc MagSafe',
-      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
-      'Chống nước': 'IP68',
+      'Màn hình': 'OLED 6,3 inch Super Retina XDR',
+      'Chip xử lý': 'Apple A19',
+      'Lưu trữ': '256GB-512GB',
+      'Camera': 'Hệ thống camera 48MP Dual Fusion',
+      'Pin & Sạc': 'Thời gian xem video: Lên đến 30 giờ-Thời gian xem video (trực tuyến): Lên đến 27 giờ-Tích hợp pin sạc lithium‑ion-Khả năng sạc nhanh:-Sạc lên đến 50% trong 20 phút6 với bộ tiếp hợp 40W trở lên (được bán riêng) sử dụng cáp sạc USB‑C-Sạc lên đến 50% trong 30 phút6 với bộ tiếp hợp 30W trở lên sử dụng Bộ Sạc MagSafe (cả hai đều được bán riêng)',
+      'Kết nối': 'Chip mạng không dây Apple N1-Chip Apple Ultra Wideband',
+      'Chống nước': 'Đạt mức IP68 (chống nước ở độ sâu tối đa 6 mét trong vòng tối đa 30 phút) theo tiêu chuẩn IEC 60529',
       'Bảo mật': 'Face ID',
-      'Khối lượng': '≈ 175g'
+      'Khối lượng': '≈ 177g',
+      'Môi Trường Hoạt Động': 'Nhiệt độ môi trường khi hoạt động: 0° đến 35° C-Nhiệt độ khi không hoạt động: −20° đến 45° C-Độ ẩm tương đối: 5% đến 95% không ngưng tụ-Độ cao hoạt động: được thử nghiệm ở độ cao lên đến 3.000 mét'
     }
   },
   {
-    id: 102, brand: 'Apple', name: 'iPhone 17 Pro', price: 17990000, rating: 4.7,
-    img: '', isNew: false,
+    id: 102, brand: 'Apple', name: 'iPhone 17 Pro', price:34990000 , rating: 4.8,
+    img: 'https://cdn.tgdd.vn/Products/Images/42/342676/s16/iphone-17-pro-sliver-thumb-650x650.png', isNew: true,
     specs: {
-      'Màn hình': 'OLED 6.1" ProMotion 1–120Hz',
-      'Chip xử lý': 'Apple A18 Pro',
-      'RAM/Lưu trữ': '8–12GB / 256–1TB',
-      'Camera': '48MP + Tele 12MP (3x) + Ultra‑wide 12MP',
-      'Pin & Sạc': '3800mAh, 35W, MagSafe',
+      'Màn hình': 'OLED 6,3 inch Super Retina XDR Công nghệ ProMotion với tốc độ làm mới thích ứng lên đến 120Hz',
+      'Chip xử lý': 'Apple A19 Pro',
+      'Lưu trữ': '256GB-512GB-1TB',
+      'Camera': '48MP + Tele 48MP (3x) + Ultra‑wide 48MP',
+      'Pin & Sạc': 'Thời gian xem video: Lên đến 31 giờ-Thời gian xem video (trực tuyến): Lên đến 28 giờ-Tích hợp pin sạc lithium‑ion-Khả năng sạc nhanh:-Sạc lên đến 50% trong 20 phút8 với bộ tiếp hợp 40W trở lên (được bán riêng) sử dụng cáp sạc USB-C-Sạc lên đến 50% trong 30 phút8 với bộ tiếp hợp 30W trở lên sử dụng Bộ Sạc MagSafe (cả hai đều được bán riêng)',
       'Vật liệu': 'Khung titan',
-      'Kết nối': '5G, Wi‑Fi 7, BT 5.3, UWB',
-      'Chống nước': 'IP68',
+      'Kết nối': 'Chip mạng không dây Apple N1-Chip Apple Ultra Wideband thế hệ thứ 2 ',
+      'Chống nước': 'Đạt mức IP68 (chống nước ở độ sâu tối đa 6 mét trong vòng tối đa 30 phút) theo tiêu chuẩn IEC 60529',
       'Bảo mật': 'Face ID',
-      'Khối lượng': '≈ 190g'
+      'Khối lượng': '≈ 204g',
+      'Môi Trường Hoạt Động': 'Nhiệt độ môi trường khi hoạt động: 0° đến 35° C-Nhiệt độ khi không hoạt động: −20° đến 45° C-Độ ẩm tương đối: 5% đến 95% không ngưng tụ-Độ cao hoạt động: được thử nghiệm ở độ cao lên đến 3.000 mét'
     }
   },
   {
-    id: 103, brand: 'Apple', name: 'iPhone 16 Pro', price: 21990000, rating: 4.8,
-    img: '', isNew: true,
+    id: 103, brand: 'Apple', name: 'iPhone 16 Pro ', price: 25590000, rating: 4.8,
+    img: 'https://cdn.tgdd.vn/Products/Images/42/329143/s16/iphone-16-pro-sa-mac-650x650.png', isNew: false,
     specs: {
-      'Màn hình': 'OLED 6.1" ProMotion 120Hz',
+      'Màn hình': 'OLED 6,3 inch Super Retina XDR Công nghệ ProMotion với tốc độ làm mới thích ứng lên đến 120Hz',
       'Chip xử lý': 'Apple A17 Pro',
-      'RAM/Lưu trữ': '8GB / 256–1TB',
+      'Lưu trữ': '128GB-256GB-512GB-1TB',
       'Camera': '48MP + Tele 12MP (5x) + Ultra‑wide 12MP',
-      'Pin & Sạc': '3300mAh, 27W, MagSafe',
+      'Pin & Sạc': '',
       'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, UWB',
-      'Chống nước': 'IP68',
+      'Chống nước': 'Đạt mức IP68 (chống nước ở độ sâu tối đa 6 mét trong vòng tối đa 30 phút) theo tiêu chuẩn IEC 60529',
       'Bảo mật': 'Face ID',
-      'Khối lượng': '≈ 187g'
+      'Khối lượng': '≈ 199g'
     }
   },
   {
-    id: 104, brand: 'Apple', name: 'iPhone 16 Pro', price: 29990000, rating: 4.9,
-    img: '', isNew: true,
+    id: 104, brand: 'Apple', name: 'iPhone 16 Pro Max', price: 31590000, rating: 4.9,
+    img: 'https://cdn.tgdd.vn/Products/Images/42/329149/s16/iphone-16-pro-max-16-titan-tu-nhien-thumbnew-650x650.png', isNew: true,
     specs: {
-      'Màn hình': 'OLED 6.7" ProMotion 120Hz',
+      'Màn hình': 'OLED 6.7 inch Super Retina XDR Công nghệ ProMotion với tốc độ làm mới thích ứng lên đến 120Hz',
       'Chip xử lý': 'Apple A17 Pro',
-      'RAM/Lưu trữ': '8GB / 256–1TB',
+      'Lưu trữ': '128GB-256GB-512GB-1TB',
       'Camera': '48MP + Tele 12MP (5x) + Ultra‑wide 12MP',
-      'Pin & Sạc': '4500mAh, 30W, MagSafe',
+      'Pin & Sạc': 'Thời gian xem video: Lên đến 27 giờ-Thời gian xem video (trực tuyến): Lên đến 22 giờ-Thời gian nghe nhạc: Lên đến 85 giờ-Tích hợp pin sạc lithium-ion-Sạc không dây MagSafe lên đến 25W với bộ tiếp hợp 30W trở lên15-Sạc không dây Qi2 lên đến 15W15-Sạc không dây Qi lên đến 7,5W15-Khả năng sạc nhanh: Sạc lên đến 50% trong khoảng 30 phút15 với bộ tiếp hợp 20W trở lên (được bán riêng) sử dụng cáp sạc USB‑C, hoặc với bộ tiếp hợp 30W trở lên sử dụng Bộ Sạc MagSafe (cả hai đều được bán riêng)',
       'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, UWB',
-      'Chống nước': 'IP68',
+      'Chống nước': 'Đạt mức IP68 (chống nước ở độ sâu tối đa 6 mét trong vòng tối đa 30 phút) theo tiêu chuẩn IEC 60529',
       'Bảo mật': 'Face ID',
       'Khối lượng': '≈ 205g'
     }
@@ -67,167 +69,175 @@ const products = [
 
   // Samsung
   {
-    id: 201, brand: 'Samsung', name: 'Galaxy S23', price: 16990000, rating: 4.6,
-    img: '', isNew: false,
+    id: 201, brand: 'Samsung', name: 'Galaxy S25 Ultra', price: 26490000, rating: 4.6,
+    img: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/d/i/dien-thoai-samsung-galaxy-s25-ultra_1__3.png', isNew: true,
     specs: {
-      'Màn hình': 'Dynamic AMOLED 2X 6.1" 120Hz',
-      'Chip xử lý': 'Snapdragon 8 Gen 2 for Galaxy',
-      'RAM/Lưu trữ': '8GB / 128–256GB',
-      'Camera': '50MP + 12MP (UW) + 10MP (3x)',
-      'Pin & Sạc': '3900mAh, 25W, sạc không dây 15W',
-      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
-      'Chống nước': 'IP68',
-      'Bảo mật': 'Vân tay siêu âm, Face Unlock',
-      'Khối lượng': '≈ 168g'
+     'Màn hình': '6.86" Dynamic AMOLED 2X, QHD+, 1–120Hz, độ sáng 3000 nits',
+     'Chip xử lý': 'Snapdragon 8 Elite for Galaxy (3nm)',
+     'RAM/Lưu trữ': '12GB/16GB RAM - 256GB/512GB/1TB (UFS 4.0)',
+     'Camera': 'Chính 200MP, Siêu rộng 50MP, Tele 3x 10MP, Periscope 5x 50MP',
+     'Pin & Sạc': '5000mAh, Sạc nhanh 45W, Sạc không dây 25W',
+     'Kết nối': '5G, Wi-Fi 7, Bluetooth 5.4, UWB, USB-C 3.2',
+     'Chống nước': 'IP68',
+     'Bảo mật': 'Vân tay siêu âm, Mở khóa khuôn mặt',
+     'Khối lượng': '219g (Thiết kế bo cong nhẹ)',
+     'Hệ điều hành': 'Android 15 (One UI 7)'
     }
   },
   {
-    id: 202, brand: 'Samsung', name: 'Galaxy S24', price: 20990000, rating: 4.7,
-    img: '', isNew: true,
+    id: 202, brand: 'Samsung', name: 'Galaxy S24', price: 19190000, rating: 4.7,
+    img: 'https://cdn2.cellphones.com.vn/358x/media/catalog/product/g/a/galaxy-s24-den_4.png', isNew: false,
     specs: {
-      'Màn hình': 'Dynamic AMOLED 2X 6.2" 1–120Hz',
-      'Chip xử lý': 'Snapdragon 8 Gen 3 for Galaxy',
-      'RAM/Lưu trữ': '8GB / 256GB',
-      'Camera': '50MP + 12MP (UW) + 10MP (3x)',
-      'Pin & Sạc': '4000mAh, 45W, không dây 15W',
-      'Kết nối': '5G, Wi‑Fi 7, BT 5.3, NFC, UWB',
-      'Chống nước': 'IP68',
-      'Bảo mật': 'Vân tay siêu âm, Face Unlock',
-      'Khối lượng': '≈ 167g'
+     'Màn hình': 'Dynamic AMOLED 2X 6.2" FHD+, 1–120Hz, 2600 nits',
+     'Chip xử lý': 'Exynos 2400 (Bản VN) / Snapdragon 8 Gen 3 (Bản Mỹ)',
+     'RAM/Lưu trữ': '8GB / 128GB–256GB–512GB',
+     'Camera': 'Chính 50MP, Ultra-wide 12MP, Tele 3x 10MP; Quay 8K',
+     'Pin & Sạc': '4000mAh, sạc nhanh 25W, sạc không dây 15W, sạc ngược',
+     'Kết nối': '5G, Wi-Fi 6E/7, BT 5.3, NFC',
+     'Chống nước': 'IP68',
+     'Bảo mật': 'Vân tay siêu âm dưới màn hình, Face Unlock',
+     'Khối lượng': '167g'
+    }
+  
+  },
+  {
+    id: 203, brand: 'Samsung', name: 'Galaxy S24 Ultra', price: 22190000, rating: 4.9,
+    img: 'https://cdn2.cellphones.com.vn/358x/media/catalog/product/g/a/galaxy-s24-ultra-vang_1_3.png', isNew: false,
+    specs: {
+     'Màn hình': '6.8" Dynamic AMOLED 2X, QHD+, 1–120Hz, 2600 nits (Phẳng)',
+     'Chip xử lý': 'Snapdragon 8 Gen 3 for Galaxy',
+     'RAM/Lưu trữ': '12GB / 256GB–512GB–1TB',
+     'Camera': 'Chính 200MP, Ultra-wide 12MP, Tele 3x 10MP, Periscope 5x 50MP',
+     'Pin & Sạc': '5000mAh, sạc nhanh 45W, sạc không dây 15W, sạc ngược',
+     'Kết nối': '5G, Wi-Fi 7, Bluetooth 5.3, UWB, NFC',
+     'Vật liệu': 'Khung Titan, Kính Corning Gorilla Armor',
+     'Chống nước': 'IP68',
+     'Bút S-Pen': 'Tích hợp sẵn (độ trễ 2.8ms)',
+     'Khối lượng': '232g'
     }
   },
   {
-    id: 203, brand: 'Samsung', name: 'Galaxy S24 Ultra', price: 32990000, rating: 4.9,
-    img: '', isNew: true,
+    id: 205, brand: 'Samsung', name: 'Galaxy Buds3 Pro', price: 3690000, rating: 4.4,
+    img: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/t/a/tai-nghe-samsung-galaxy-buds-3-pro_9_.png', isNew: false,
     specs: {
-      'Màn hình': 'Dynamic AMOLED 2X 6.8" LTPO 1–120Hz',
-      'Chip xử lý': 'Snapdragon 8 Gen 3 for Galaxy',
-      'RAM/Lưu trữ': '12GB / 256–1TB',
-      'Camera': '200MP + 12MP (UW) + 10MP (3x) + 50MP (5x)',
-      'Pin & Sạc': '5000mAh, 45W, không dây 15W',
-      'Kết nối': '5G, Wi‑Fi 7, BT 5.3, NFC, UWB',
-      'Bút': 'S‑Pen hỗ trợ',
-      'Chống nước': 'IP68',
-      'Bảo mật': 'Vân tay siêu âm',
-      'Khối lượng': '≈ 232g'
-    }
-  },
-  {
-    id: 205, brand: 'Samsung', name: 'Galaxy Buds2 Pro', price: 4490000, rating: 4.4,
-    img: '', isNew: false,
-    specs: {
-      'Kiểu': 'Tai nghe True Wireless',
-      'Driver': '2‑way dynamic',
-      'Chống ồn': 'ANC 3 mức + Ambient',
-      'Thời lượng pin': 'Tai nghe ~8h, kèm hộp ~29h',
-      'Sạc': 'USB‑C, sạc không dây',
-      'Kết nối': 'BT 5.3, SSC HiFi, AAC, SBC',
-      'Kháng nước': 'IPX7',
-      'Khối lượng': '≈ 19.9g (cặp)'
+      'Kiểu': 'True Wireless (Thiết kế in-ear có đuôi - Stem)',
+     'Driver': '2-way (10.5mm Dynamic Woofer + 6.1mm Planar Tweeter)',
+     'Chống ồn': 'Adaptive ANC (Tự động chỉnh theo môi trường), Voice Detect',
+     'Thời lượng pin': 'Tai nghe ~6h (ANC On) / 7h (ANC Off); Tổng kèm hộp ~26h-30h',
+     'Sạc': 'USB-C, sạc không dây Qi',
+     'Kết nối': 'Bluetooth 5.4, SSC UHQ (24bit/96kHz), Auracast',
+     'Kháng nước': 'IP57 (Chống cả bụi và nước)',
+     'Tính năng': 'Đèn LED Blade Lights, Dịch trực tiếp (Galaxy AI), 360 Audio',
+     'Khối lượng': '5.4g (mỗi tai), 46.5g (hộp)'
     }
   },
 
   // Xiaomi
   {
-    id: 301, brand: 'Xiaomi', name: 'Xiaomi 17 Pro Max', price: 12990000, rating: 4.5,
-    img: '', isNew: false,
+    id: 301, brand: 'Xiaomi', name: 'Xiaomi 17 Pro Max', price: 26990000, rating: 4.5,
+    img: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQL6N-bSEGhHkMIDH_J3f-8PZwawQZqi9SCpcye4KY4t31vBfnELpY9ai0xWMfZiYPIgrK6EMR9', isNew: true,
     specs: {
-      'Màn hình': 'AMOLED 6.67" 120Hz',
-      'Chip xử lý': 'Dimensity 9300 / Snapdragon 8 Gen 3 (tuỳ thị trường)',
-      'RAM/Lưu trữ': '12GB / 256–512GB UFS 4.0',
-      'Camera': '50MP + 50MP (UW) + 64MP (3x)',
-      'Pin & Sạc': '5000mAh, 120W có dây, 50W không dây',
-      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC, IR blaster',
-      'Chống nước': 'IP68',
-      'Khối lượng': '≈ 210g'
+      'Màn hình chính': '6.9 inch LTPO AMOLED, 1-120Hz, 3500 nits.',
+      'Màn hình phụ': '2.9 inch LTPO AMOLED, 120Hz.',
+      'Chipset': 'Snapdragon 8 Elite Gen 5.',
+      'Camera': '3x 50MP (chính, góc siêu rộng, tele 5x).',
+      'Pin': '7500mAh.',
+      'RAM/ROM': '12GB/16GB RAM, 512GB/1TB ROM.'
     }
   },
   {
-    id: 302, brand: 'Xiaomi', name: 'Xiaomi Redmi K90 Pro Max', price: 15990000, rating: 4.6,
-    img: '', isNew: true,
+    id: 302, brand: 'Xiaomi', name: 'Xiaomi Redmi K90 Pro Max', price: 15890000, rating: 4.6,
+    img: 'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ2IqHRoG7tIG714ojullBarfi-VaqV1S_I8xK_OME5wny4-RIucWlOzmRxR0foV6tP4oibQVhh', isNew: true,
     specs: {
-      'Màn hình': 'AMOLED 6.67" 120Hz, 1.5K',
-      'Chip xử lý': 'Snapdragon 8 Gen 3',
-      'RAM/Lưu trữ': '12–16GB / 256–1TB',
-      'Camera': '50MP OIS + 8MP (UW) + 12MP (2x)',
-      'Pin & Sạc': '5000mAh, 120W',
-      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC',
-      'Kháng bụi nước': 'IP64',
-      'Khối lượng': '≈ 198g'
+      'Chipset': 'Snapdragon 8 Elite Gen 5 (3nm).',
+      'Màn hình': '6.9 inch LTPO AMOLED, 120Hz, độ sáng đỉnh 3500 nits, Dolby Vision, HDR10+, 2560Hz PWM.',
+      'Camera Sau': '3 camera 50MP (chính OIS + Tele zoom quang 5x + Siêu rộng).',
+      'Camera Trước': '32MP.',
+      'Pin': '7560mAh, Sạc nhanh 100W có dây, 50W không dây.',
+      'RAM/ROM': '12GB/16GB LPDDR5X, 256GB/512GB/1TB UFS 4.1.',
+      'Âm thanh': 'Loa ngoài kênh đôi 2.1 được tinh chỉnh bởi Bose (có loa siêu trầm).',
+      'Kháng nước': 'IP68/IP69.',
+      'Hệ điều hành': 'Android 16 + HyperOS 3.0.'
     }
   },
   {
-    id: 303, brand: 'Xiaomi', name: 'Xiaomi 15 Ultra', price: 6990000, rating: 4.3,
-    img: '', isNew: true,
+    id: 303, brand: 'Xiaomi', name: 'Xiaomi 15 Ultra', price: 25990000, rating: 4.3,
+    img: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRTXAnWB1s3m5ycVu1rN3ggChui3Uiocs1RYOj6y-Bg-ijuzjYno7rwXzUGjFEOMcQbyIqvZq3t', isNew: true,
     specs: {
-      'Màn hình': 'AMOLED 6.73" LTPO 1–120Hz',
-      'Chip xử lý': 'Snapdragon 8 Gen 2',
-      'RAM/Lưu trữ': '12GB / 256–512GB',
-      'Camera': '50MP Leica + 48MP periscope (5x) + 50MP UW',
-      'Pin & Sạc': '5000mAh, 90W có dây, 50W không dây',
-      'Kết nối': '5G, Wi‑Fi 6, BT 5.2, NFC',
-      'Chống nước': 'IP68',
-      'Khối lượng': '≈ 225g'
+      'Chipset': 'Qualcomm Snapdragon 8 Elite (3nm).',
+      'Màn hình': '6.73 inch LTPO AMOLED, độ phân giải 2K (1440 x 3200 pixels), 120Hz, độ sáng tối đa 3200 nits, 68 tỷ màu, Dolby Vision, HDR10+.',
+      'Camera sau (Leica)': '4 camera gồm: 50MP chính (Sony LYT-900 1 inch), 50MP góc siêu rộng, 50MP tele (zoom 3x), 200MP siêu tele (periscope zoom 4.3x).',
+      'Camera trước': '32MP.',
+      'RAM': '12GB / 16GB (LPDDR5X).',
+      'Bộ nhớ trong': '256GB / 512GB / 1TB (UFS 4.1).',
+      'Pin & Sạc': '5410 mAh, sạc nhanh có dây 90W, sạc không dây 80W.',
+      'Hệ điều hành': 'Android 15, HyperOS 2.',
+      'Tính năng khác': 'Chống nước/bụi IP68, Wi-Fi 7, Bluetooth 6.0, AI.'
     }
   },
 
   // Oppo
   {
-    id: 401, brand: 'Oppo', name: 'OPPO Find X9 Pro', price: 10990000, rating: 4.4,
-    img: '', isNew: true,
+    id: 401, brand: 'Oppo', name: 'OPPO Find X9 Pro', price: 20990000, rating: 4.4,
+    img: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR9GaxeoJD3NZv_XMlkNOrUCVEOOoADzxVt-u9KQf0XFJ8jqBtx199RS3c6sgeT9u8IMkl2QovK', isNew: true,
     specs: {
-      'Màn hình': 'AMOLED 6.8" LTPO 1–120Hz',
-      'Chip xử lý': 'Snapdragon 8 Gen 3',
-      'RAM/Lưu trữ': '12–16GB / 256–512GB',
-      'Camera': '50MP + 64MP periscope (5x) + 48MP (UW), Hasselblad',
-      'Pin & Sạc': '5000mAh, 100W SuperVOOC, 50W không dây',
-      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC',
-      'Chống nước': 'IP68',
-      'Khối lượng': '≈ 214g'
+      'Màn hình': '6.78 inch LTPO AMOLED, 1.5K (1272x2772 pixels), 120Hz, độ sáng cao.',
+      'Chip xử lý': 'MediaTek Dimensity 9500 (tiến trình 3nm).',
+      'RAM & Bộ nhớ': '16GB LPDDR5X + 512GB UFS 4.0/4.1.',
+      'Camera sau': '200MP (Tele tiềm vọng OIS) + 50MP (Chính OIS) + 50MP (Góc siêu rộng) + 2MP (Mono/Đa sắc).',
+      'Camera trước': '50MP (Hỗ trợ lấy nét tự động - AF).',
+      'Pin & Sạc': '7500mAh, Sạc nhanh 80W có dây, 50W không dây.',
+      'Hệ điều hành': 'ColorOS 16 (trên nền Android 16).',
+      'Tính năng khác': 'IP68/IP69, Wi-Fi 7, NFC, cảm biến vân tay trong màn hình.'
     }
   },
   {
-    id: 402, brand: 'Oppo', name: 'Oppo Find X8', price: 35990000, rating: 4.7,
-    img: '', isNew: false,
+    id: 402, brand: 'Oppo', name: 'Oppo Find X8', price: 17490000, rating: 4.7,
+    img: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ2IqHRoG7tIG714ojullBarfi-VaqV1S_I8xK_OME5wny4-RIucWlOzmRxR0foV6tP4oibQVhh', isNew: false,
     specs: {
-      'Màn hình': 'AMOLED 6.7" 120Hz',
-      'Chip xử lý': 'Snapdragon 8 Gen 2',
-      'RAM/Lưu trữ': '12GB / 256–512GB',
-      'Camera': '50MP + 50MP (UW) + 32MP (2x)',
-      'Pin & Sạc': '4800mAh, 80W SuperVOOC',
-      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
-      'Chống nước': 'IP68',
-      'Khối lượng': '≈ 195g'
+      'Hệ điều hành': 'Android 15, ColorOS 15.',
+      'Chip xử lý (CPU)': 'MediaTek Dimensity 9400 (8 nhân).',
+      'Chip đồ họa (GPU)': 'ARM Immortalis G925 MC12.',
+      'Màn hình': 'AMOLED 6.59 inch, độ phân giải 1.5K (1256 x 2760 pixels), tần số quét 120Hz, độ sáng cao (tối đa 4500 nits).',
+      'RAM': '12GB / 16GB.',
+      'Bộ nhớ trong (ROM)': '256GB / 512GB / 1TB (UFS 4.0).',
+      'Camera sau': 'Bộ 3 camera 50MP (Góc rộng + Siêu rộng + Telephoto), tinh chỉnh bởi Hasselblad.',
+      'Camera trước': '32MP.',
+      'Pin & Sạc': '5630 mAh, sạc nhanh có dây 80W, sạc không dây 50W.',
+      'Kháng nước/bụi': 'IP68/IP69.',
+      'Kết nối': 'Wi-Fi 7, Bluetooth 5.4, 5G, NFC, cổng hồng ngoại IR.'
     }
   },
 
   // OnePlus
   {
     id: 501, brand: 'OnePlus', name: 'OnePlus 13T 5G', price: 18990000, rating: 4.6,
-    img: '', isNew: true,
+    img: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQtREmjChMmxVCzKnYAVvjjUGexRz7lBVVLmGW5r9EmwqRJOGT0ty6yUg2lgNnh_7svujixIDAaaD1dCt8lJgHe6GkRA6MUVKrKLXOswSwG&usqp=CAc', isNew: true,
     specs: {
-      'Màn hình': 'AMOLED 6.74" 120Hz, 1.5K',
-      'Chip xử lý': 'Snapdragon 8 Gen 3',
-      'RAM/Lưu trữ': '12–16GB / 256–512GB UFS 4.0',
-      'Camera': '50MP OIS + 48MP (UW) + 64MP (3x)',
-      'Pin & Sạc': '5500mAh, 100W SuperVOOC, 50W không dây',
-      'Kết nối': '5G, Wi‑Fi 7, BT 5.4, NFC',
-      'Chống nước': 'IP65/IP68 (tuỳ bản)',
-      'Khối lượng': '≈ 206g'
+      'Chip xử lý': 'Snapdragon 8 Elite (3nm) với GPU Adreno 830.',
+      'Màn hình': '6.32 inch, LTPO AMOLED, 120Hz, độ sáng cao (1600 nits HBM), độ phân giải 1.5K (1216x2640).',
+      'RAM': '12GB / 16GB (LPDDR5X).',
+      'Bộ nhớ trong': '256GB / 512GB / 1TB (UFS 4.0).',
+      'Camera sau': '50MP (Chính, OIS) + 50MP (Tele 2x, OIS).',
+      'Camera trước': '16MP.',
+      'Pin & Sạc': '6260mAh, sạc nhanh 80W (có nguồn 90W).',
+      'Hệ điều hành': 'Android 15 với ColorOS 15.',
+      'Thiết kế': 'Khung hợp kim nhôm, mặt lưng kính, nhỏ gọn (150.8 x 71.7 x 8.2 mm), ~185g.',
+      'Tính năng khác': 'Loa stereo, Wi-Fi chuyên dụng G1, sạc bypass, DisplayMate A++, Rain Touch 2.0.'
     }
   },
   {
-    id: 502, brand: 'OnePlus', name: 'OnePlus ACE 5 Ultra', price: 3990000, rating: 4.4,
-    img: '', isNew: false,
+    id: 502, brand: 'OnePlus', name: 'OnePlus ACE 5 Ultra', price: 12450000, rating: 4.4,
+    img: 'https://bizweb.dktcdn.net/100/257/835/files/oneplus-ace-5-ultra-2-87c5b9e2-62db-4c1a-921c-236f94eaf070.jpg?v=1754099569555', isNew: false,
     specs: {
-      'Màn hình': 'AMOLED 6.74" 120Hz',
-      'Chip xử lý': 'Dimensity 9200 / 9300',
-      'RAM/Lưu trữ': '12GB / 256GB',
-      'Camera': '50MP + 8MP (UW) + 2MP',
-      'Pin & Sạc': '5000mAh, 150W SUPERVOOC',
-      'Kết nối': '5G, Wi‑Fi 6E, BT 5.3, NFC',
-      'Kháng nước': 'IP64',
-      'Khối lượng': '≈ 200g'
+      'Màn hình': 'AMOLED 6.83 inch, độ phân giải 1.5K (1272x2800), tần số quét 144Hz, độ sáng cao (1400 nits), hỗ trợ HDR10+, Dolby Vision.',
+      'Vi xử lý (Chip)': 'MediaTek Dimensity 9400+ (tiến trình 3nm), GPU Immortalis-G925 MC12.',
+      'RAM & ROM': '12GB/16GB RAM (LPDDR5X), bộ nhớ trong 256GB/512GB/1TB (UFS 4.0).',
+      'Camera sau': '50MP chính (cảm biến Sony IMX906, OIS) + 8MP góc siêu rộng.',
+      'Camera trước': '16MP.',
+      'Pin & Sạc': '6700mAh, sạc nhanh 100W.',
+      'Hệ điều hành': 'Android 14 / 15 với ColorOS 15 (bản nội địa).',
+      'Tính năng khác': 'Loa stereo, vân tay dưới màn hình, cảm biến hồng ngoại, kháng nước IP65.'
     }
   }
 ];
@@ -445,7 +455,12 @@ window.addEventListener('DOMContentLoaded', () => {
   qs('#closeWishlist')?.addEventListener('click', () => wishlistDialog.close());
   qs('#clearWishlist')?.addEventListener('click', () => { store.wishlist = []; renderWishlist(); });
 
-  qs('#checkout')?.addEventListener('click', () => { if (!store.currentUser) return alert('Vui lòng đăng nhập để thanh toán.'); if (!store.cart.length) return alert('Giỏ hàng trống.'); alert('Demo: Thanh toán giả lập thành công. Cảm ơn bạn!'); store.cart = []; renderCart(); refreshAuthUI(); });
+  qs('#checkout')?.addEventListener('click', () => {
+    if (!store.currentUser) return alert('Vui lòng đăng nhập để thanh toán.');
+    if (!store.cart.length) return alert('Giỏ hàng trống.');
+    // Navigate to a dedicated checkout page for a better flow
+    location.href = 'checkout.html';
+  });
 
   // Delegation for product grid buttons
   qs('#productGrid')?.addEventListener('click', (e) => {
@@ -537,3 +552,50 @@ qs('#productGrid')?.addEventListener('click', (e) => {
     btn.classList.toggle('active');
   }
 });
+// ====== CHECKOUT PAGE ======
+  (function(){
+    function qs(sel, root=document){return root.querySelector(sel);} 
+    const formatVND = (n)=> n.toLocaleString('vi-VN') + '₫';
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const summaryList = qs('#summaryList');
+    let subtotal = 0;
+    if (!cart.length) summaryList.innerHTML = '<p>Giỏ hàng trống.</p>';
+    else {
+      const frag = document.createDocumentFragment();
+      for (const it of cart){
+        const row = document.createElement('div'); row.className = 'summary-item';
+        row.innerHTML = `<div class="s-left"><img src="${it.img}" alt="${it.name}" /><div class="s-meta"><div class="s-title">${it.name}</div><div class="s-qty">x${it.qty}</div></div></div><div class="s-right">${formatVND(it.price * it.qty)}</div>`;
+        frag.appendChild(row); subtotal += it.price * it.qty;
+      }
+      summaryList.appendChild(frag);
+    }
+    const shipping = subtotal > 0 ? 30000 : 0; // demo flat shipping
+    qs('#summarySubtotal').textContent = formatVND(subtotal);
+    qs('#summaryShipping').textContent = formatVND(shipping);
+    qs('#summaryTotal').textContent = formatVND(subtotal + shipping);
+
+    qs('#orderForm')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      if (!cart.length) { alert('Giỏ hàng trống.'); return; }
+      const form = new FormData(e.target);
+      const order = {
+        id: 'ORD' + Date.now(),
+        customer: { name: form.get('fullName'), address: form.get('address'), phone: form.get('phone'), email: form.get('email') },
+        payment: form.get('payment'),
+        items: cart,
+        subtotal, shipping, total: subtotal + shipping,
+        createdAt: new Date().toISOString()
+      };
+      // Save to localStorage as demo persistence
+      const orders = JSON.parse(localStorage.getItem('orders')||'[]'); orders.push(order); localStorage.setItem('orders', JSON.stringify(orders));
+      localStorage.setItem('cart', JSON.stringify([]));
+      qs('#orderMessage').textContent = `Đặt hàng thành công! Mã đơn: ${order.id}. Cảm ơn bạn.`;
+      // Update summary to empty
+      summaryList.innerHTML = '<p>Giỏ hàng đã được đặt.</p>';
+      qs('#summarySubtotal').textContent = formatVND(0);
+      qs('#summaryShipping').textContent = formatVND(0);
+      qs('#summaryTotal').textContent = formatVND(0);
+      // Optionally redirect after a short delay
+      setTimeout(()=> location.href = 'index.html', 4000);
+    });
+  })(); 
