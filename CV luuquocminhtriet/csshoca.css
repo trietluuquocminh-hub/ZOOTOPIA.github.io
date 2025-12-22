@@ -1,0 +1,42 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url('https://raw.githubusercontent.com/trietluuquocminh-hub/trietluuquocminh-hub.github.io/main/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.whale {
+  position: absolute;
+  width: 150px;
+  transition: transform 0.2s linear;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.seaweed {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  pointer-events: none;
+  margin-left: 0;
+}
+
+.fish {
+  position: absolute;
+  transition: transform 0.2s linear;
+  pointer-events: none;
+}
